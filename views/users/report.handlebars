@@ -1,60 +1,24 @@
-{{!-- Report Form  --}}
+{{!-- Report Form --}}
 
-<nav class="tabs" data-component="tabs" data-equals="true">
-    <ul>
-        <li class="active"><a href="#tab1">REPORT</a></li>
-        <li><a href="#tab12">LOGIN</a></li>
-    </ul>
-</nav>
-
-<form action="/users/report" method="post"></form>
+<form action="/users/report" method="post">
 
     <div id="report">
-        <div class="right">
-            <h1>Details</h1>
-                <input type="text" name="name" placeholder="Name (First, Last)">
-                <input type="text" name="email" placeholder="Email">
+        <div class="report-left">
+            <div class="reportbox" id="rbox">
+                <h1>Details</h1>
+
+                <input type="text" name="name" placeholder="First Name">
+                <input type="text" name="name" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email">
                 <input type="tel" name="phone" placeholder="Phone">
-                <div class="row-message">
-                <textarea name="message" placeholder="Additonal Information"></textarea>
-                
-                <input type="submit" value="Upload Image" name="submit"><br/>
-             <button class="button outline">Submit</button>
-        </div>
-    </div>
+                <textarea type="message" name="message" placeholder="Additonal Information"></textarea><br/>
 
-
-<label><b>Select</b></label>
-    <div class="row gutters">
-        <div class="col col-3">
-            <div class="form-item">
-                <select><option>---</option></select>
-            <div class="desc">Month</div>
-        </div>
-    </div>
-
-    
-    <div class="col col-3">
-        <div class="form-item">
-            <select><option>---</option></select>
-                <div class="desc">Day</div>
-        </div>
-    </div>
-        
-    
-    <div class="col col-6">
-        <div class="form-item">
-            <select><option>---</option></select>
-                <div class="desc">Year</div>
+                        <div class="img-btn">
+                        <input type="file" multiple name="text" placeholder="Upload Image"><br/><br/>
+                        <input type="submit" name="doginfo_submit" value="Submit">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </form>
-
-
-<!-- Footer -->
-<footer id="footer" class"grid">
-    <div>
-        <p><a href="https://github.com/emjys/project-2"><strong>D-Poap</strong></a> &nbsp&copy 2017 &nbsp | &nbsp All Rights Reserved</p>
-    </div>
-</footer>

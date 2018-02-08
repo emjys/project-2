@@ -1,0 +1,44 @@
+<!-- Dogs Info -->
+
+<div id="dog-info" class="grid">
+    <div class="dogs">
+        <h1>Dog Information</h1>
+
+          <form method="post" action="/dogs/new">
+              <input type="text" name="name" placeholder="Name">
+              <input type="text" name="breed" placeholder="Breed">
+              <input type="date" name="dob" placeholder="Date of Birth">
+
+              <select name="size">
+                <option value="size">Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+
+              <select name="gender">
+                <option value="Gender">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+
+             <select name="temperament">
+                <option value="temper">Temperament</option>
+                <option value="Active">Active</option>
+                <option value="Agressive">Aggressive</option>
+                <option value="Dominant">Dominant</option>
+                <option value="Hyperactive">Hyperactive</option>
+                <option value="Independent">Independent</option>
+                <option value="Sharp">Sharp</option>
+                <option value="Shy">Shy</option>
+                <option value="Submissive">Submissive</option>
+              </select>
+
+              <div class="img-btn">
+                <input type="file" multiple name="text" placeholder="Upload Image">
+                <br/><br/>
+                <input type="submit" name="submit" value="Submit">
+              </div>
+         </form>
+    </div>
+</div>

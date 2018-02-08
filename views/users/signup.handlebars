@@ -1,34 +1,18 @@
 {{!-- Signup Form  --}}
 
-<form action="/users/signup" method="post">
-
 <div id="signup">
-    <div class="right">
-      <h1>Create Account</h1>
-          <input type="text" name="username" placeholder="Full Name (First, Last)" />
-            <input type="text" name="email" placeholder="E-mail" />
-            <input type="password" name="password" placeholder="Password" />
-          <input type="password" name="password2" placeholder="Retype password" />
-        <input type="submit" name="signup_submit" value="Sign Up" />
+    <div class="signup-left">
+        <h1>Sign Up</h1>
+
+        <form method="post" action="/users/signup">
+            <input type="text" name="firstname" placeholder="First Name">
+            <input type="text" name="lastname" placeholder="Last Name">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="passwordRetype" placeholder="Retype Password">
+            <input type="submit" name="signup_submit" value="Submit">
+
+            <p>Already have an account?<br/><a href="/login">Login</a></p>
+        </form>
     </div>
-    
-    <p>Already have an account? <a href="users/login">Login</a></p>
-
-    <div class="or">OR</div>
-
-
-  <div id="login">
-    <div class="left">
-      <h1>Sign In with</h1>
-        <ul class="container-icons">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-google"></a>
-          <a href="#" class="fa fa-linkedin"></a>
-          <a href="#" class="fa fa-youtube"></a>
-          <a href="#" class="fa fa-instagram"></a>
-        </ul>
-    </div>
-  </div>
-
-</form>
+</div>

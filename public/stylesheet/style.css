@@ -1,15 +1,12 @@
+body, html {
+  height: 100%;
+} 
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  /* line-height: 1.5; */
-  text-align: center;
-}
-
-h2,h3 {
-  margin-top: 2em;
-  padding: 0.5em 0;
 }
 
 p {
@@ -18,57 +15,50 @@ p {
 }
 
 
-
 /* Navigation ==========================*/
 
-/* ul {
-  margin:0;
-  padding:0;
-} */
-
 header {
-  min-height:70px;
+  min-height: 70px;
+  padding: 20px 10px;
+}
+
+.logone {
+  font-size: 1.8em;
+  vertical-align: -0.1em;
+  padding: 0.8em 0.6em;
 }
 
 ul a {
-  color:#353232;
-  text-decoration:none;
-  text-transform: uppercase;
-  font-size:14px;
+  color: #353232;
+  text-decoration: none;
+  font-size: 1.2em;
+  /* &:hover span {
+    border-bottom: 2px solid black;
+  } */
 }
 
-ul li {
-  display:inline;
-  padding: 0 5px;
+nav ul li {
+  display: inline-block;
+  padding: 0;
 }
 
 #breadcrumbs-custom-separator li:after {
   content: '/';
 }
 
-
-#logone h1 {
-  text-align: left;
-  padding: 0.3em 0.1em;
-}
-
-
-
 header nav {
-  float:right;
-  margin-top:8px;
+  float: right;
+  margin-top: 8px;
 }
 
-header .current a{
-  color:#e8491d;
-  font-weight:bold;
+header a:hover {
+  color: #a5a0a0;
+  font-weight: bold;
 }
 
-header a:hover{
-  color:#a5a0a0;
-  font-weight:bold;
+.floatright {
+  float: right;
 }
-
 
 
 /* Social Media ==========================*/
@@ -79,7 +69,7 @@ header a:hover{
   width: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 0.3em;
+  margin: 0.01em;
   border-radius: 50%;
 }
 
@@ -117,50 +107,54 @@ header a:hover{
   color: white;
 }
 
+#social-icons {
+  display: inline;
+}
+
+#wrapper {
+  display: inline;
+}
 
 
-/* Contents ==========================*/
+/* Content-One ==========================*/
 
 #content-one {
   min-height: 600px;
   color: #fff;
   text-align: center;
+  height: 700px;
+  background-color: #fff;
 }
 
-#content-one .doglook-img {
-  position: absolute;
-  background: #333
-    url("../img/dog-look.png");
-  background-position: center;
+.doglook {
+  background-image: url("/img/dog-look.png");
+  background-position: -10em center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
   width: 100%;
-  height: 600px;
-  z-index: -1;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-#content-one h1 {
-  padding-top: 50x;
-  padding-bottom: 0;
-  width: 4em;
-  height: 8em;
-  background-color: #fff;
-  opacity: 0.4;
+.doglook-content {
+  text-align: left;
+  padding: 0.8em;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-#content-one .content-wrap,
-#section-a .content-wrap {
-  padding: 0.2em;
+#content-one h2 {
+  width: 10em;
+  height: auto;
+  margin-bottom: 1em;
 }
-
 
 .btn {
   display: inline-block;
-  background: rgb(41, 24, 24);
-  color: #fff;
+  color: #333;
   text-decoration: none;
-  padding: 1em 2em;
-  margin: 0.5em 0;
+  padding: 0.6em;
+  border: 1px solid #666;
 }
 
 .btn:hover {
@@ -169,343 +163,436 @@ header a:hover{
 }
 
 
+/* Newsletter ==========================*/
 
-
-
-#section-a {
-  background: #eaeaea;
-  color: #333;
-  padding-bottom: 2em;
-  width: 100%;
-  height: 50em;
+#subscribe {
+  text-align: center;
+  padding: 1em;  
 }
 
-#section-a, img {
-  width: 25em;
-  height: auto;
-  padding: 3em;
-
+#subscribe h3 {
+  padding-top: 1.3em;
 }
 
-
-
-
-
-#section-b {
-  padding: 2em 1em 1em;
+#subscribe div {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 15em;
+  padding-left: 1em;
 }
 
-#section-b ul {
-  list-style: none;
+#subscribe input {
+  display: inline-block;
   margin: 0;
+  border: none;
+}
+
+#subscribe button {
+  background-color: transparent;
+  color: darkgrey;
+}
+
+/* Contact Us ==========================*/
+
+#content-four {
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-image: url("/img/dog-peeping.png");
+  background-position-y: -6em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 45em;
+  /* position: absolute; */
+}
+
+#content-four form {
+  padding: 1em;
+  width: 15em;
+  background: #fff;
+  opacity: 0.8;
+}
+
+#content-four h3 {
+  margin-bottom: 0;
+}
+
+#content-four p {
+  padding-top: 0;
+}
+
+#content-four input {
+  width: 100%;
+}
+
+.contact-info p {
+  font-size: 85%;
   padding: 0;
 }
 
-#section-b li {
-  margin-bottom: 1em;
+.contact-info i {
+  padding: 2px;
+}
+
+
+/* Footer ==========================*/
+
+footer {
+  width: 100%;
+  height: 3em;
+  padding: 0.2em;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+}
+
+footer a:link {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer span.fa {
+  color: #c59a6d;
+  font-size: 26px;
+}
+
+
+/* Dog Info ==========================  */
+
+#dog-info {
+  position: relative;
+  margin: 4% auto;
+  width: 800px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: url("/img/dog-info.png");
+  background-position-x: 12em
+}
+
+#dog-info h1 {
+  margin: 0em;
+  padding-bottom: 0.4em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.dogs {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5em;
+  left: 0;
+  width: 280px;
+  height: 600px;
   background: #fff;
+  border: 1px solid #fff;
+}
+
+#login-space {
+  line-height: 2em;
+}
+
+
+/* Login ==========================  */
+
+#login {
+  position: relative;
+  margin: 4% auto;
+  width: 800px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: url("/img/dog-laptop.png");
+}
+
+#login h1 {
+  margin: 0.em;
+  padding-bottom: 0.4em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.login-left {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5em;
+  left: 0;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+#login-space {
+  line-height: 2em;
+}
+
+#login a:link {
+  text-decoration: none;
+}
+
+#login a:hover {
+  text-decoration: underline;
+}
+
+
+/* Forgot Password ==========================  */
+
+#forgot {
+  position: relative;
+  margin: 4% auto;
+  width: 800px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: url("/img/dog-laptop.png");
+}
+
+
+#forgot h1 {
+  margin: 0.em;
+  padding-bottom: 0.4em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#forgot-space {
+  line-height: 2em;
+}
+
+
+/* Report ==========================  */
+
+#report {
+  position: relative;
+  margin: 4% auto;
+  width: 800px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: url("/img/dog-report.png");
+  background-position-x: 12em;
+}
+
+#report h1 {
+  margin: 0em;
+  padding-bottom: 0.4em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.report-left {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5em;
+  left: 0;
+  width: 280px;
+  height: 500px;
+  background: #fff;
+  /* border: 1px solid #fff; */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="list"],
+select {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+
+/* Signup ==========================  */
+
+#signup {
+  position: relative;
+  margin: 4% auto;
+  width: 800px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: url("/img/dog-laptop.png");
+}
+
+#signup h1 {
+  margin: 0;
+  padding-bottom: 0.4em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.signup-left {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5em;
+  left: 0;
+  width: 280px;
+  height: 500px;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.container #signup-footer {
+  width: 100%;
+  height: 3em;
+  text-align: center;
+  position: relative;
+  right: 6em;
+}
+
+#signup-space {
+  line-height: 2em;
+}
+
+#signup a:link {
+  text-decoration: none;
+}
+
+#signup a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Members ========================== */
+
+#members h3 {
+  text-align: center;
+}
+
+#item-content h3 {
+  text-align: center;
+}
+
+#members {
+  padding: 2em 1em 1em;
+}
+
+#members ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+}
+
+#members li {
+  margin-bottom: 0em;
+  background: #AAA;
   color: #333;
 }
 
 .card-content {
-  padding: 1.5em;
+  padding: 2.5em;
+  height: 20em;
+  width: 22.5em;
 }
 
-
-
-
-#section-c, img {
-  width: 25em;
-  height: auto;
-  padding: 3em;
+.card p {
+  width: 17em;
 }
 
-
-
-  
-  /* Contact Us ==========================*/
-
-#contactus .contact-img {
-  position: absolute;
-  background: #333
-    url("img/dog-peeping.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 40em;
-  z-index: -1;
+#contact-btn {
+  background-color: transparent;
+  color:#fff;
+  position: center;
 }
-   
- .bottom > address { 
-    line-height: 22px; 
-    margin-bottom: 40px; 
-  }
-   
-
-
-
-
-   /* Login ==========================  */
-  #login {
-    position: relative;
-    margin: 5% auto;
-    width: 800px;
-    height: 500px;
-    background: #FFF;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  } 
-
-
-  #login h1 {
-      margin: 0.8em;
-      padding-bottom: 1em;
-      font-weight: 300;
-      font-size: 26px;
-  } 
-
-/* Form */
-  .login-right {
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
-
-
-
-input[type="text"],
-  input[type="password"] {
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 4px;
-    width: 220px;
-    height: 32px;
-    border: none;
-    border-bottom: 1px solid #AAA;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    transition: 0.2s ease;
-  } 
-
-
-
-  
-  /* Report ==========================  */
-  #report {
-    position: relative;
-    margin: 5% auto;
-    width: 800px;
-    height: 500px;
-    background: #FFF;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    background-size: cover;
-    background-image: url("/img/dog-report.png");
-    }
-     
-
-  .right {
-    position: absolute;
-    left: 480px;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 400px;
-    height: 400px;
-  }
-
-
-
-
-  /* Signup ==========================  */
-  #signup {
-    position: relative;
-    margin: 5% auto;
-    width: 800px;
-    height: 500px;
-    background: #FFF;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  } 
  
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  #signup h1 {
-      margin: 0.8em;
-      padding-bottom: 1em;
-      font-weight: 300;
-      font-size: 26px;
+
+/* Search ========================== */
+.search-sect {
+ padding: 10em;
+}
+
+
+
+/* Media Queries ========================== */
+
+@media (max-width: 600px) {
+.card 
+.grid
+.doglook 
+#content-one {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  .card 
+  .grid
+  .doglook 
+  #content-one {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
   }
 
-  .right {
-    position: absolute;
-    box-sizing: border-box;
-    padding: 30px;
-    width: 400px;
-    height: 400px;
-  }
 
 
 
-/* Footer ==========================*/
-#footer {
-  background-color:#fff;
-  color: black;
-  text-align: center;
-
-}
-
-#footer a:link {
-  text-decoration: none;
-}
-
-#footer a:hover {
-  text-decoration: underline; 
-}
-
-
-#footer {
-	background: #282f35;
-	padding: 40px 0;
-	color: #ffffff;
-	border-bottom: 5px solid #c59a6d;
-}
-
-#footer span.fa {
-	color: #c59a6d;
-	font-size: 26px;
-	margin-left: 10px;
-}
-
-#footer a {
-	color: #ffffff;
-}
-
-#footer a:hover {
-  color: #c59a6d;
-}
-
-  
-/* Media Grid ========================== */
-
-#media-grid {
-  background-size: cover;
-  background-image: url("/img/1.png");
-}
-
-#media-grid {
-
-  @include grid-media-columns(2);
-
-  & > div {
-      margin-bottom: 20px;
-      height: 80px;
-  }
-  & > div:nth-child(2n) {
-    height: 200px;
-  }
-  & > div:nth-child(5n) {
-    height: 120px;
-  }
-}
-
-
-  
-  /* Media Queries ========================== */
-
-@media (min-width: 700px) {
+@media all and (min-width: 700px) {
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(1, minmax(auto, 25em)) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(atuo, 25em)) 1fr;
   }
 
-  #section-a .content-text {
-    columns: 2;
-    column-gap: 1em;
-  }
-
-  #section-a .content-text p {
-    padding-top: 0;
-  }
-
-  .content-wrap,
-  #section-b ul {
-    grid-column: 1/3;
-  }
-
-  .box,
-  #footer div {
-    grid-column: span 1;
-  }
-
-  #section-b ul {
+  #members ul {
     display: flex;
     justify-content: space-around;
   }
 
-  #section-b li {
-    width: 31%;
+  #members li {
+    width: 30%;
   }
-}
-  
 
+} 
 
-.my-media-grid {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-
-  // column gap is specified
-  // in the grid settings (variables.scss) as $grid-gutter
-  -webkit-column-gap: 2%;
-  -moz-column-gap: 2%;
-  column-gap: 2%;
-}
-
-.my-media-grid > div {
-  display: inline-block;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .my-media-grid {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-  }
-}
-
-  
-  /* Media Queries
-  @media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box {
-      float:none;
-      text-align:center;
-      width:100%;
-    }
-  
-    header{
-      padding-bottom:20px;
-    }
-  
-    #showcase h1{
-      margin-top:40px;
-    }
-  
-    #newsletter button, .quote button{
-      display:block;
-      width:100%;
-    }
-  
-    #newsletter form input[type="email"], .quote input, .quote textarea {
-      width:100%;
-      margin-bottom:5px;
-    }
-  }
-   */

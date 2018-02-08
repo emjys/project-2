@@ -1,0 +1,66 @@
+  <section id="members" class="grid">
+    <h3>Featured Dogs</h3>
+      <ul>
+        <li>
+          <div class="card">
+            <img src="/img/dog-flower.png">
+            <div class="card-content">
+              <h3 class="card-title">Doe</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="submit" id="contact-btn"><i class="fa fa-envelope"></i>Contact</button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card">
+            <img src="/img/dog-black.png" width: 100%>
+            <div class="card-content">
+              <h3 class="card-title">Sain</h3>
+              <p>Nostrum culpa neque quo eum et maiores exercitationem.</p>
+              <button type="submit" id="contact-btn"><i class="fa fa-envelope"></i>Contact</button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card">
+            <img src="/img/dogs-three.png">
+            <div class="card-content">
+              <h3 class="card-title">Ront</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+             
+                <div class="col col-8 push-middle push-center">
+                     <button type="submit" id="contact-btn"><i class="fa fa-envelope"></i>Contact</button>
+                </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+ </section>
+ 
+ 
+ <div id="item-content" class="grid">
+    <h3>Welcome – Manage your Dogs</h3>
+      <div class="dog_list">
+        {{#each allDogs}}
+        </div>
+
+          <div class="container-photo">
+              <div class="w3-card-4" style="width:50%">
+                <h3>{{this.name}}</h3>
+                   <img src="/img/chihuahua.png" style="width:100%">
+
+                {{!-- <input type="submit" name="edit_submit" value="Edit"> --}}
+                <a href="/editform/{{this.id}}">Edit</a>
+
+                  <form method="post" action="/delete/{{_id}}?_method=DELETE">
+                    <input type="submit" name="delete" value="Delete">
+                  </form>
+
+              </div>
+          </div>
+        </div>
+       {{/each}}
+

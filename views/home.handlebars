@@ -1,119 +1,59 @@
 {{!-- Landing Page --}}
-  
-<section id="content-one" class="grid">
-    <div class="doglook-img"></div>
-      <div class="content-wrap"></div>
-        <div class=content-box>
-          <h2>Dogs are <br/>one of the most common pets<br/>in the world.</h2>
-        <a href="#section-b" class="btn">Read More</a>
-    </div>
-  </div>
-</section>
 
-
-<section id="section-a" class="grid">
-    <div class="content-wrap">
-        <div class="card">
-            <img src="img/dog-foul vector.png">
-        </div>
-    <h2 class="content-title">Dog Mess: It is a <b>PROBLEM</b></h2>
-
-    <div class="content-text">
-        <p>The problem of dog-owners / walkers not cleaning up after their dog is ever present. Owners who do not clean up after their pets in public areas can be  ned up to S$1,000, if convicted.<p>
-            <p>In the past, methods have been put in place to deter dog owners from leaving their dog droppings such as  nes, and posted notices.
-              Animal waste, if not cleared, causes soiling and the transmission of in- fectious and parasitic diseases such as leptospirosis, a bacterial disease that can a ect animals and humans.</p>
-              <p>Given the issues with dog mess, there is a legal and moral obligation to clean up after our dogs if it poops in a public park, schools, or any shared common area where the mess could cause a problem for others.</p>
-      </div>
+<section id="content-one" class="doglook">
+    <div class="doglook-content">
+        <h2>Dogs are one of the most common pets in the world.</h2>
+        <a href="#content-four" class="btn">Read More</a>
     </div>
 </section>
 
 
-<section id="section-c" class="grid">
-    <div class="content-wrap">
-      <div class="card">
-          <img src="img/dog-poop-seq.png">
-      </div>
-      
-      <h2 class="content-title">TEXT</h2>
-          <div class="content-text">
-              <p>The problem of dog-owners / walkers not cleaning up after their dog is ever present. <br/>
-                  Owners who do not clean up after their pets in public areas can be fined up to S$1,000, if convicted.<p>
-      </div>
-    </div>
-</section>
-
-
-
-<section id="subscribe">
-    <div class="container">
+<section id="subscribe" class="grid">
+    <form action="/users/subscribe" method="post">
         <h3>Newsletter</h3>
-          
-          <form>
-            <div class="container">
-              <input type="email" placeholder="Enter Email Address...">
-                <button type="submit" class="button1">Subscribe</button>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-            </div>
-        </form>
-    </div>
+        <div>
+            <input class="subscribe-email" type="email" id="sub-email" name="sub-email" placeholder="Enter Email Address" required>
+            <button type="submit" id="subscribe-submit"><i class="fa fa-envelope"></i></button>
+        </div>
+    </form>
 </section>
 
 
 
-<section id="contactus">
-    <div class="container">
-        <h3>Contact Us</h3>
-        <p>Let Us Know How We Can Assist You.</p>
-    </div>
+<section id="content-four" class="grid">
+        <form method="post" action="/users/contactus">
+            <h3>Contact Us</h3>
+            <p>Let Us Know How We Can Assist You.</p>
 
-      
-<form action="#">
-    <div class="row-name">
-    
-    <div>
-      <input type="text" class="text" name="name" placeholder="Name">
-    </div>
+            <div>
+                <input type="text" class="text" name="name" placeholder="Name">
+            </div>
 
-        <div>
-            <input type="text" class="text" name="email" placeholder="Email">
-        </div>
+            <div>
+                <input type="email" class="text" name="email" placeholder="Email">
+            </div>
 
             <div>
                 <input type="tel" class="phone" name="email" placeholder="Phone">
             </div>
 
-          <div class="row-message">
-            <textarea name="message" placeholder="Message"></textarea>
-          </div><br/>
-          
-          <button class="button outline">Send</button>
-      </div>
+            <div class="row-message">
+                <textarea name="message" placeholder="Message"></textarea>
+            </div><br/>
 
+            <input type="submit" name="send" value="Send"><br/>
+            <div class="contact-info">
+                <p><i class="fa fa-envelope"></i><a href="mailto:someone@example.com">email@doap.com</a></p>
+                <p><i class="fa fa-phone"></i>+65 3456 7890</p>
+                <p><i class="fa fa-map-marker"></i>15-01 Bond House</p>
+            </div>
     </form>
 </section>
 
 
-<div class="col-md-3 col-sm-6">
-    <div class="contact-info bottom">
-        <address>
-            <i class="fa fa-envelope"></i> <a href="mailto:someone@example.com">email@d-poap.com</a> <br> 
-            <i class="fa fa-phone"></i>+65 3456 7890 <br> 
-            <i class="fa fa-map-marker"></i>15-01 Bond House <br>
-            Redbound Road <br> 
-            Singapore <br> 
-        </address>
-    </div>
-</div>
+<footer>
+    <a href="https://github.com/emjys/project-2"><strong>DoAP</strong></a>
+    &nbsp&copy 2017 &nbsp | &nbsp All Rights Reserved &nbsp | &nbsp
 
-
-   
-<!-- Footer -->
-<footer id="footer" class"grid">
-  <div>
-    <p><a href="https://github.com/emjys/project-2"><strong>D-Poap</strong></a> &nbsp&copy 2017 &nbsp | &nbsp All Rights Reserved</p>
-  </div>
-
-  <div class="pull-right"> 
-    <a href="#home" class="page-scroll">Back to Top <span class="fa fa-angle-up"></span></a>
-  </div>
+    <a href="/" class="page-scroll">Back to Top<span class="fa fa-angle-up"></span></a>
 </footer>

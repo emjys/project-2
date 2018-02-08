@@ -1,0 +1,43 @@
+<!-- Edit Data -->
+
+<div id="dog-info">
+    <div class="dogs">
+        <h1>Dog Information</h1>
+
+          <form method="post" action="/editform/{{dog.id}}?_method=PUT">
+
+              <input type="text" name="name" value="{{ dog.name }}" placeholder="Name">
+              <input type="text" name="breed" value="{{ dog.breed }}" placeholder="Breed">
+              <input type="date" name="dob" value="{{ dog.dob }}" placeholder="Date of Birth">
+
+              <select name="size" value="{{ dog.temperament }}">
+                <option value="size">Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+
+              <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+
+             <select name="temperament" value="{{ dog.temperament }}">
+                <option value="temper">Temperament</option>
+                <option value="Active">Active</option>
+                <option value="Agressive">Aggressive</option>
+                <option value="Dominant">Dominant</option>
+                <option value="Hyperactive">Hyperactive</option>
+                <option value="Independent">Independent</option>
+                <option value="Sharp">Sharp</option>
+                <option value="Shy">Shy</option>
+                <option value="Submissive">Submissive</option>
+              </select>
+
+              <div class="img-btn">
+                <input type="file" multiple name="text" placeholder="Upload Image"><br/><br/>
+              </div>
+                <input type="submit" name="edit" value="Edit">
+         </form>
+    </div>
+</div>

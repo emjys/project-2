@@ -1,35 +1,19 @@
 {{!-- Login Form  --}}
 
-<nav class="tabs" data-component="tabs" data-equals="true">
-    <ul>
-        <li class="active"><a href="#tab1">LOGIN</a></li>
-        <li><a href="#tab12">SIGN UP</a></li>
-    </ul>
-</nav>
-
-
-<form action="/users/login" method="post">
-    <div id="login">
-        <div class="right">
-            <h1>Login</h1>
-                <input type="text" name="email" placeholder="E-mail">
+<div id="login" class="grid">
+    <div class="login-left">
+        <h1>Login</h1>
+            <form method="post" action="/users/login">
+                <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="password" placeholder="Password">
-                <input type="checkbox" name="remember"> Remember Me<br>
-            <button class="button outline">Submit</button></br>
-        <a href="/reset">Forgot Password?</a>
-    </div>   
-</form>
+                <input type="checkbox" name="remember">Remember Me<br><br>
+                <input type="submit" name="signup_submit" value="Submit">
 
+            </form>
 
-<div class="container" id="dogpic">
-    <img src="img/dog-laptop.png">
-</div>
-
-
-
-<!-- Footer -->
-<footer id="form-footer" class"container">
-    <div>
-        <p><a href="https://github.com/emjys/project-2"><strong>D-Poap</strong></a> &nbsp&copy 2017 &nbsp | &nbsp All Rights Reserved</p>
+            <div id="login-space">
+                <a href="/forgot">Forgot Password?</a><br/>
+                <p>Don't have an account?<br/><a href="/signup">Sign Up</a></p>
+             </div>
     </div>
-</footer>
+</div>
