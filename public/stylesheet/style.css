@@ -1,6 +1,6 @@
 body, html {
   height: 100%;
-} 
+}
 
 body {
   margin: 0;
@@ -167,7 +167,7 @@ header a:hover {
 
 #subscribe {
   text-align: center;
-  padding: 1em;  
+  padding: 1em;
 }
 
 #subscribe h3 {
@@ -539,7 +539,7 @@ select {
   color:#fff;
   position: center;
 }
- 
+
 img {
   display: block;
   width: 100%;
@@ -557,9 +557,9 @@ img {
 /* Media Queries ========================== */
 
 @media (max-width: 600px) {
-.card 
+.card
 .grid
-.doglook 
+.doglook
 #content-one {
   -ms-flex: 100%;
   flex: 100%;
@@ -567,16 +567,14 @@ img {
 }
 
 @media (max-width: 800px) {
-  .card 
+  .card
   .grid
-  .doglook 
+  .doglook
   #content-one {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
-
-
 
 
 @media all and (min-width: 700px) {
@@ -593,6 +591,4 @@ img {
   #members li {
     width: 30%;
   }
-
-} 
-
+}

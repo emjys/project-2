@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 2: DoAP
+# Project 2: DoAP
 
 DoAP is a website designed for the dog-owners / lovers to post photographs of their dog pets.
 
